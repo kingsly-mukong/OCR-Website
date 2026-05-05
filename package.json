@@ -6,6 +6,7 @@
   "scripts": {
     "start:dev": "vite",
     "build": "tsc -b && vite build",
+    "deploy": "firebase deploy --only hosting:ocr-website",
     "lint": "eslint .",
     "preview": "vite preview"
   },

@@ -1,0 +1,13 @@
+{
+  "hosting": {
+    "source": ".",
+    "site": "ocr-website",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

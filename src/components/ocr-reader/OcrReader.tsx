@@ -140,20 +140,11 @@ export const OcrReader: React.FC = () => {
               gap: "0.5rem",
             }}
           >
-            <span>
+            <span className="selectedFileName">
               📎 {selectedFile.name} ({(selectedFile.size / 1024).toFixed(0)}{" "}
               KB)
             </span>
-            <button
-              onClick={handleClear}
-              style={{
-                background: "none",
-                border: "none",
-                color: "#ef4444",
-                cursor: "pointer",
-                fontSize: "0.8rem",
-              }}
-            >
+            <button onClick={handleClear} className="removeBtn">
               ✖ Remove
             </button>
           </div>
@@ -202,18 +193,7 @@ export const OcrReader: React.FC = () => {
         {extractedText && (
           <div className="result-wrapper">
             <div className="success-badge">
-              <span
-                style={{
-                  background: "#10b98120",
-                  padding: "0.2rem 0.8rem",
-                  borderRadius: "999px",
-                  fontSize: "0.75rem",
-                  fontWeight: 500,
-                  color: "#10b981",
-                }}
-              >
-                ✓ Extraction complete
-              </span>
+              <span className="extractionComplete">✓ Extraction complete</span>
             </div>
             <div className="result-scroll">
               <ResultDisplay text={extractedText} onClear={handleClear} />

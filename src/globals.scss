@@ -1,6 +1,7 @@
 @font-face {
-  font-family: "Inter";
-  src: url("/assets/fonts/Inter-VariableFont_opsz\,wght.ttf") format("truetype");
+  font-family: "NotoSans";
+  src: url("/assets/fonts/NotoSans-VariableFont_wdth,wght.ttf")
+    format("truetype");
   font-weight: normal;
   font-display: swap;
 }
@@ -26,11 +27,6 @@
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   --primary: #3b82f6;
   --primary-dark: #2563eb;
-  --secondary: #64748b;
-  --success: #10b981;
-  --error: #ef4444;
-  --background: #f8fafc;
-  --surface: #ffffff;
   --text: #1e293b;
   --text-light: #64748b;
   --border: #e2e8f0;
@@ -47,7 +43,7 @@ html {
 body {
   background-color: var(--background);
   color: var(--text);
-  font-family: "Inter";
+  font-family: "NotoSans";
   line-height: 1.5;
 }
 
