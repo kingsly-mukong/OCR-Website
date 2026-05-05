@@ -1,0 +1,146 @@
+.file-upload {
+  width: 100%;
+
+  .dropzone {
+    // position: relative;
+    border: 2px solid var(--border);
+    border-radius: 1.25rem;
+    padding: 2rem;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(4px);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    box-shadow: var(--shadow);
+
+    &:hover {
+      border-color: var(--primary);
+      background: rgba(255, 255, 255, 0.8);
+      transform: scale(1.01);
+      box-shadow: var(--shadow-lg);
+    }
+
+    &.dragging {
+      border-color: var(--primary);
+      background: rgba(59, 130, 246, 0.05);
+      border-width: 3px;
+      transform: scale(1.02);
+      box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
+    }
+
+    &.hasPreview {
+      padding: 0;
+      border: none;
+      background: transparent;
+      backdrop-filter: none;
+      box-shadow: none;
+      transform: none;
+    }
+  }
+
+  .icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 0 auto 1rem;
+    color: var(--primary);
+    opacity: 0.7;
+    transition: opacity 0.2s;
+
+    .dropzone:hover & {
+      opacity: 1;
+    }
+  }
+
+  .text {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+  }
+
+  .subtext {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+  }
+
+  .fileInput {
+    display: none;
+  }
+
+  .browseBtn {
+    display: inline-block;
+    background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+    color: white;
+    padding: 0.6rem 1.4rem;
+    border-radius: 2rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: var(--shadow);
+    border: none;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+      filter: brightness(1.05);
+    }
+  }
+
+  .previewContainer {
+    // position: relative;
+    display: inline-block;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+
+  .preview {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 280px;
+    object-fit: contain;
+    display: block;
+  }
+
+  .clearBtn {
+    // position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    color: white;
+    border: none;
+    border-radius: 2rem;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+
+    &:hover {
+      background: var(--error);
+      transform: scale(1.1);
+    }
+  }
+
+  .error {
+    color: var(--error);
+    font-size: 0.85rem;
+    margin-top: 0.75rem;
+    text-align: center;
+    background: rgba(239, 68, 68, 0.1);
+    padding: 0.5rem;
+    border-radius: 0.75rem;
+  }
+}

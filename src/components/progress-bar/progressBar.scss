@@ -1,0 +1,27 @@
+.progressBar {
+  background-color: var(--border);
+  border-radius: 9999px;
+  height: 0.75rem;
+  position: relative;
+  overflow: hidden;
+
+  .bar {
+    background-color: var(--primary);
+    height: 100%;
+    border-radius: 9999px;
+    transition: width 0.3s ease;
+  }
+
+  .label {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: var(--text);
+    background: rgba(255, 255, 255, 0.8);
+    padding: 0 0.2rem;
+    border-radius: 0.25rem;
+  }
+}

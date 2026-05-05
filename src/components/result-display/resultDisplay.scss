@@ -1,0 +1,42 @@
+.resultDisplay {
+  display: flex;
+  flex-direction: column;
+  height: 100%; // ← take full height of parent (.result-scroll)
+  background: var(--surface);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-lg);
+  overflow: hidden; // prevents component overflow
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background: var(--background);
+    border-bottom: 1px solid var(--border);
+    flex-shrink: 0; // header never shrinks
+  }
+
+  .header h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+
+  .actions {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .text {
+    flex: 1; // takes remaining space
+    overflow-y: auto; // scrolls when content exceeds
+    min-height: 0; // flex overflow fix
+    padding: 1.5rem;
+    font-family: "Courier New", monospace;
+    font-size: 0.875rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    background: var(--surface);
+    line-height: 1.6;
+  }
+}
